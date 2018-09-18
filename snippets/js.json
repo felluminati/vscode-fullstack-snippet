@@ -1,0 +1,18 @@
+{
+  "React Class Component": {
+    "prefix": "rcc",
+    "body": [
+      "import React, {Component} from 'react'",
+      "export class ${1:ComponentName} extends Component {",
+      "\trender(){",
+      "\t\treturn (",
+      "\t\t\t<div>$0</div>",
+      "\t\t)",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:ComponentName}"
+    ],
+    "discription": ""
+  }
+}

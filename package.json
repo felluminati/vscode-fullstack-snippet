@@ -1,7 +1,7 @@
 {
-  "name": "helloworld",
-  "displayName": "helloWorld",
-  "description": "practice",
+  "name": "fullstack-snippets",
+  "displayName": "Fullstack Snippets",
+  "description": "Helpful code snippets based on the Fullstack Academy tech stack.",
   "version": "0.0.1",
   "publisher": "JCINC",
   "engines": {
@@ -10,21 +10,11 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:extension.sayHello"
-  ],
-  "main": "./out/extension",
   "contributes": {
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/js.json"
-      }
-    ],
-    "commands": [
-      {
-        "command": "extension.sayHello",
-        "title": "Hello World"
+        "path": "./snippets/javascript.json"
       }
     ]
   },

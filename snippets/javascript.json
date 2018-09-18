@@ -1,0 +1,48 @@
+{
+  "Express Router Method": {
+    "prefix": "ex-router-method",
+    "description": "Express Router Method",
+    "body": [
+      "router.${1:get}('${2:/}', async (req, res, next) => {",
+      "\ttry {",
+      "\t\t$0",
+      "\t\tres.${3:json}();",
+      "\t} catch (err) {",
+      "\t\tnext(err)",
+      "\t}",
+      "})"
+    ]
+  },
+  "React Class Component": {
+    "prefix": "rcc",
+    "description": "React Class Component",
+    "body": [
+      "import React, { Component } from 'react'",
+      "",
+      "export class ${1:ComponentName} extends Component {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<div>$0</div>",
+      "\t\t)",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:ComponentName}"
+    ]
+  },
+  "React Functional Component": {
+    "prefix": "rfc",
+    "description": "React Functional Component",
+    "body": [
+      "import React from 'react'",
+      "",
+      "export const ${1:ComponentName} = () => {",
+      "\treturn (",
+      "\t\t<div>$0</div>",
+      "\t)",
+      "}",
+      "",
+      "export default ${1:ComponentName}"
+    ]
+  }
+}

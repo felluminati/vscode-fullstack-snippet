@@ -44,5 +44,21 @@
       "",
       "export default ${1:ComponentName}"
     ]
+  },
+  "Sequel Model Definition": {
+    "prefix": "smd",
+    "description": "Sequelize model definition",
+    "body": [
+      "const Sequelize = require('sequelize')",
+      "const db = require(${1:db path)",
+      "",
+      "const ${2:ModelName} = db.define(${3:modelString}, {",
+      "\t${4:columnName}: {",
+      "\t\ttype: Sequelize.${5:dataType}",
+      "\t}",
+      "})",
+      "",
+      "module.exports = ${2:ModelName}"
+    ]
   }
 }

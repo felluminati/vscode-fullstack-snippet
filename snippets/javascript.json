@@ -60,5 +60,28 @@
       "",
       "module.exports = ${2:ModelName}"
     ]
+  },
+  "Redux Action Type Creator": {
+    "prefix": "ratc",
+    "description": "Redux Action Type and Creator",
+    "body": [
+      "export const ${1:ACTION_NAME} = '${1:ACTION_NAME}'",
+      "",
+      "",
+      "export const ${2:ActionCreatorName} = (${3:argument}) => ({",
+      "\ttype: ${1:ACTION_NAME},",
+      "\t$3{argument}",
+      "})",
+      ""
+    ]
+  },
+  "Redux Thunk Creator": {
+    "prefix": "rtc",
+    "description": "Redux Thunk Creator",
+    "body": [
+      "export const ${1:thunkFunctionName = () => {",
+      "\treturn async dispatch => {",
+      "\t\ttry {"
+    ]
   }
 }

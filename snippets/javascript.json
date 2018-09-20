@@ -72,7 +72,20 @@
       "\t},$0"
     ]
   },
-
+  "Sequelize hasMany": {
+    "prefix": "seq-hm",
+    "description": "Sequelize hasMany association",
+    "body": [
+      "${1:ModelOne}.hasMany(${2:ModelTwo})",
+      "${2:ModelTwo}.belongsTo(${1:ModelOne})",
+      "${0}"
+    ]
+  },
+  "Sequelize belongsTo": {
+    "prefix": "seq-bt",
+    "description": "Sequelize belongsTo association",
+    "body": ["${1:ModelOne}.belongsTo(${2:ModelTwo})", "${0}"]
+  },
   "Sequelize belongsToMany": {
     "prefix": "seq-btm",
     "description": "Sequelize belongsToMany association",

@@ -61,6 +61,18 @@
       "module.exports = ${2:ModelName}"
     ]
   },
+  "Sequelize Model Column": {
+    "prefix": "seq-model-col",
+    "description": "Sequelize model column",
+    "body": [
+      "\t${1:columnName}: {",
+      "\t\ttype: Sequelize.${2:dataType},",
+      "\t\tallowNull: false,",
+      "\t\tvalidate: ${3:validation_data}",
+      "\t},$0"
+    ]
+  },
+
   "Sequelize belongsToMany": {
     "prefix": "seq-btm",
     "description": "Sequelize belongsToMany association",

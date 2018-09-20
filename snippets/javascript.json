@@ -1,12 +1,12 @@
 {
   "Express Router Method": {
-    "prefix": "ex-router-method",
+    "prefix": "exp-router-method",
     "description": "Express Router Method",
     "body": [
       "router.${1:get}('${2:/}', async (req, res, next) => {",
       "\ttry {",
-      "\t\t$0",
-      "\t\tres.${3:json}();",
+      "\t\t${0}",
+      "\t\tres.${3:json}()",
       "\t} catch (err) {",
       "\t\tnext(err)",
       "\t}",
@@ -14,7 +14,7 @@
     ]
   },
   "React Class Component": {
-    "prefix": "rcc",
+    "prefix": "react-cc",
     "description": "React Class Component",
     "body": [
       "import React, { Component } from 'react'",
@@ -31,12 +31,12 @@
     ]
   },
   "React Functional Component": {
-    "prefix": "rfc",
+    "prefix": "react-fc",
     "description": "React Functional Component",
     "body": [
       "import React from 'react'",
       "",
-      "export const ${1:ComponentName} = () => {",
+      "export const ${1:ComponentName} = (${2}) => {",
       "\treturn (",
       "\t\t<div>$0</div>",
       "\t)",
@@ -45,14 +45,14 @@
       "export default ${1:ComponentName}"
     ]
   },
-  "Sequel Model Definition": {
-    "prefix": "smd",
+  "Sequelize Model Definition": {
+    "prefix": "seq-model-def",
     "description": "Sequelize model definition",
     "body": [
       "const Sequelize = require('sequelize')",
-      "const db = require(${1:db path)",
+      "const db = require('${1:../db}')",
       "",
-      "const ${2:ModelName} = db.define(${3:modelString}, {",
+      "const ${2:ModelName} = db.define('${3:modelString}', {",
       "\t${4:columnName}: {",
       "\t\ttype: Sequelize.${5:dataType}",
       "\t}",
@@ -61,27 +61,56 @@
       "module.exports = ${2:ModelName}"
     ]
   },
-  "Redux Action Type Creator": {
-    "prefix": "ratc",
+  "Sequelize belongsToMany": {
+    "prefix": "seq-btm",
+    "description": "Sequelize belongsToMany association",
+    "body": [
+      "${1:ModelOne}.belongsToMany(${2:ModelTwo}, { through: ${3:ThroughTable})",
+      "${2:ModelTwo}.belongsToMany(${1:ModelOne}, { through: ${3:ThroughTable})",
+      "${0}"
+    ]
+  },
+  "Redux Action Type and Creator": {
+    "prefix": "redux-action-type-and-creator",
     "description": "Redux Action Type and Creator",
     "body": [
       "export const ${1:ACTION_NAME} = '${1:ACTION_NAME}'",
       "",
-      "",
       "export const ${2:ActionCreatorName} = (${3:argument}) => ({",
       "\ttype: ${1:ACTION_NAME},",
-      "\t$3{argument}",
-      "})",
-      ""
+      "\t${3:argument}",
+      "})"
     ]
   },
   "Redux Thunk Creator": {
-    "prefix": "rtc",
+    "prefix": "redux-thunk",
     "description": "Redux Thunk Creator",
     "body": [
-      "export const ${1:thunkFunctionName = () => {",
-      "\treturn async dispatch => {",
-      "\t\ttry {"
+      "export const ${1:myThunkName} = () => async dispatch => {",
+      "\ttry {",
+      "\t\t${0}",
+      "\t} catch (err) {",
+      "\t\tconsole.error(err)",
+      "\t}",
+      "}"
+    ]
+  },
+  "Redux Reducer": {
+    "prefix": "redux-reducer",
+    "description": "Redux Reducer",
+    "body": [
+      "export const ${1:myReducer} = (state = ${2:initialState}, action) => {",
+      "\tswitch (action.type) {",
+      "\t\tcase ${3:ACTION_NAME}:",
+      "\t\t\treturn {",
+      "\t\t\t\t...state,",
+      "\t\t\t\t${0}",
+      "\t\t\t}",
+      "",
+      "\t\tdefault:",
+      "\t\t\treturn state",
+      "\t}",
+      "}"
     ]
   }
 }

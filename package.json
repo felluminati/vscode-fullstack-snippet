@@ -3,13 +3,30 @@
   "displayName": "Fullstack Snippets",
   "description": "Helpful code snippets based on the Fullstack Academy tech stack.",
   "version": "0.0.1",
-  "publisher": "JCINC",
-  "engines": {
-    "vscode": "^1.27.0"
+  "publisher": "Fullstack Academy",
+  "icon": "images/logo.png",
+  "galleryBanner": {
+    "color": "#333333",
+    "theme": "dark"
+  },
+  "homepage": "https://github.com/felluminati/vscode-fullstack-snippet/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felluminati/vscode-fullstack-snippet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/felluminati/vscode-fullstack-snippet/issues"
   },
   "categories": [
-    "Other"
+    "Snippets"
   ],
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "scripts": {
+    "build": "vsce package",
+    "publish": "vsce publish"
+  },
   "contributes": {
     "snippets": [
       {
@@ -18,18 +35,12 @@
       }
     ]
   },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test"
-  },
   "devDependencies": {
     "typescript": "^2.6.1",
     "vscode": "^1.1.21",
     "tslint": "^5.8.0",
     "@types/node": "^8.10.25",
     "@types/mocha": "^2.2.42"
-  }
+  },
+  "license": "SEE LICENSE IN LICENSE"
 }

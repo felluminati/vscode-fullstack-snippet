@@ -3,7 +3,7 @@
   "displayName": "Fullstack Snippets",
   "description": "Helpful code snippets based on the Fullstack Academy tech stack.",
   "version": "6.1.0",
-  "publisher": "JCINC",
+  "publisher": "fullstackFellows",
   "engines": {
     "vscode": "^1.27.0"
   },

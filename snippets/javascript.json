@@ -95,6 +95,19 @@
       "${0}"
     ]
   },
+  "DataBase creation": {
+    "prefix": "dbc",
+    "description": "Database Creation with Sequelize",
+    "body": [
+      "const Sequelize = require('sequelize')",
+      "",
+      "const db = new Sequelize(",
+      "\t'postgres://localhost:5432/${1:databaseName}',",
+      "\t{logging: false}",
+      ")",
+      "module.exports= db"
+    ]
+  },
   "Redux Action Type and Creator": {
     "prefix": "redux-action-type-and-creator",
     "description": "Redux Action Type and Creator",

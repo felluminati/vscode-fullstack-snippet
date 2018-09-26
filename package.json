@@ -2,8 +2,8 @@
   "name": "fullstack-snippets",
   "displayName": "Fullstack Snippets",
   "description": "Helpful code snippets based on the Fullstack Academy tech stack.",
-  "version": "0.0.1",
-  "publisher": "JCINC",
+  "version": "6.2.0",
+  "publisher": "fullstackFellows",
   "engines": {
     "vscode": "^1.27.0"
   },

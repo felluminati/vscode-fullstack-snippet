@@ -2,7 +2,7 @@
   "name": "fullstack-snippets",
   "displayName": "Fullstack Snippets",
   "description": "Helpful code snippets based on the Fullstack Academy tech stack.",
-  "version": "6.4.0",
+  "version": "6.5.0",
   "publisher": "fullstackFellows",
   "icon": "images/logo.png",
   "galleryBanner": {

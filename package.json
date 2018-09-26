@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "vsce package",
-    "publish": "vsce publish"
+    "publish": "vsce publish",
     "vscode:prepublish": "npm run compile",	
     "compile": "tsc -p ./",	
     "watch": "tsc -watch -p ./",	

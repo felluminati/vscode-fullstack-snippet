@@ -2,7 +2,7 @@
   "name": "fullstack-snippets",
   "displayName": "Fullstack Snippets",
   "description": "Helpful code snippets based on the Fullstack Academy tech stack.",
-  "version": "6.2.0",
+  "version": "6.3.0",
   "publisher": "fullstackFellows",
   "engines": {
     "vscode": "^1.27.0"

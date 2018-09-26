@@ -107,6 +107,31 @@
       "module.exports = ${2:ModelName}"
     ]
   },
+  "Sequelize Model Column": {
+    "prefix": "seq-model-col",
+    "description": "Sequelize model column",
+    "body": [
+      "\t${1:columnName}: {",
+      "\t\ttype: Sequelize.${2:dataType},",
+      "\t\tallowNull: false,",
+      "\t\tvalidate: ${3:validation_data}",
+      "\t},$0"
+    ]
+  },
+  "Sequelize hasMany": {
+    "prefix": "seq-hm",
+    "description": "Sequelize hasMany association",
+    "body": [
+      "${1:ModelOne}.hasMany(${2:ModelTwo})",
+      "${2:ModelTwo}.belongsTo(${1:ModelOne})",
+      "${0}"
+    ]
+  },
+  "Sequelize belongsTo": {
+    "prefix": "seq-bt",
+    "description": "Sequelize belongsTo association",
+    "body": ["${1:ModelOne}.belongsTo(${2:ModelTwo})", "${0}"]
+  },
   "Sequelize belongsToMany": {
     "prefix": "seq-btm",
     "description": "Sequelize belongsToMany association",
@@ -114,6 +139,19 @@
       "${1:ModelOne}.belongsToMany(${2:ModelTwo}, { through: ${3:ThroughTable})",
       "${2:ModelTwo}.belongsToMany(${1:ModelOne}, { through: ${3:ThroughTable})",
       "${0}"
+    ]
+  },
+  "DataBase creation": {
+    "prefix": "dbc",
+    "description": "Database Creation with Sequelize",
+    "body": [
+      "const Sequelize = require('sequelize')",
+      "",
+      "const db = new Sequelize(",
+      "\t'postgres://localhost:5432/${1:databaseName}',",
+      "\t{logging: false}",
+      ")",
+      "module.exports= db"
     ]
   },
   "Redux Action Type and Creator": {

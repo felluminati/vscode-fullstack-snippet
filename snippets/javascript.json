@@ -100,9 +100,9 @@
       "",
       "const ${2:ModelName} = db.define('${3:modelString}', {",
       "\t${4:columnName}: {",
-      "\t\ttype: Sequelize.${5:dataType}",
+      "\t\ttype: Sequelize.${5|STRING,TEXT,INTEGER,FLOAT,ENUM(),ARRAY(Sequelize.TEXT),JSON|}",
       "\t},",
-      "",
+      "\t$0",
       "})",
       "",
       "module.exports = ${2:ModelName}"
@@ -112,11 +112,12 @@
     "prefix": "seq-model-col",
     "description": "Sequelize model column",
     "body": [
-      "\t${1:columnName}: {",
-      "\t\ttype: Sequelize.${2:dataType},",
-      "\t\tallowNull: false,",
-      "\t\tvalidate: ${3:validation_data}",
-      "\t},$0"
+      "${1:columnName}: {",
+      "\ttype: Sequelize.${2|STRING,TEXT,INTEGER,FLOAT,ENUM(),ARRAY(Sequelize.TEXT),JSON|},",
+      "\tallowNull: false,",
+      "\tvalidate: ${4:validation_data}",
+      "},",
+      "$0"
     ]
   },
   "Sequelize hasMany": {

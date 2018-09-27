@@ -4,21 +4,17 @@ This is the README for Fullstack Snippets.
 
 ## Table of Contense
 
-#### \* Features
+#### Features
 
-#### \* Prefix List
+#### Prefix List
+  ##### Sequelize
+  ##### Express
+  ##### React
+  ##### Redux
 
-##### \* Sequelize
+#### Known Issues
 
-##### \* Express
-
-##### \* React
-
-##### \* Redux
-
-#### \* Known Issues
-
-#### \* Release Notes
+#### Release Notes
 
 ## Features
 

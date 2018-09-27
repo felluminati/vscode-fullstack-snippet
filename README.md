@@ -5,14 +5,14 @@ This is the README for Fullstack Snippets.
 
 ## Table of Contense
 
-* [Features](#Features)
-* [Prefix List](#Prefix-List)
-  *  [Sequelize](#Sequelize)
-  *  [Express](#Express)
-  *  [React](#React)
-  *  [Redux](#Redux)
-* [Known Issues](#Known-Issues)
-* [Release Notes](#Rease-Notes)
+* [Features](#features)
+* [Prefix List](#prefix-list)
+  *  [Sequelize](#sequelize)
+  *  [Express](#express)
+  *  [React](#react)
+  *  [Redux](#redux)
+* [Known Issues](#known-issues)
+* [Release Notes](#rease-notes)
 
 ## Features
 

@@ -1,19 +1,17 @@
 {
-  "Express Server Index": {
-    "prefix": "exp-server-index",
-    "description": "Express server setup for index.js file",
+  "Express Server Setup": {
+    "prefix": "exp-server",
+    "description": "Express: Server Setup",
     "body": [
       "const path = require('path')",
       "const express = require('express')",
       "const app = express()",
-      "const PORT = ${1:8080}",
+      "const PORT = ${1:8000}",
       "",
-      "app.use(express.json())",
       "app.use(express.urlencoded({ extended: true }))",
+      "app.use(express.json())",
       "",
-      "app.use(express.static(path.join(__dirname, '../public')))",
-      "",
-      "app.use('/${2:api}', require('./${2:api}'))",
+      "app.use('/${2:api}', require('./${2:api}'))${0}",
       "",
       "// static file-serving middleware",
       "app.use(express.static(path.join(__dirname, '..', 'public')))",
@@ -42,14 +40,14 @@
       "})",
       "",
       "app.listen(PORT, () => console.log(`listening on port ${3:http://localhost}:${PORT}`))",
-      "${0}"
+      ""
     ]
   },
-  "Express Router Method": {
-    "prefix": "exp-router-method",
-    "description": "Express Router Method",
+  "Express Route": {
+    "prefix": "exp-route",
+    "description": "Express: Route",
     "body": [
-      "router.${1:get}('${2:/}', async (req, res, next) => {",
+      "router.${1:get}('/${2}', async (req, res, next) => {",
       "\ttry {",
       "\t\t${0}",
       "\t\tres.${3:json}()",
@@ -61,7 +59,7 @@
   },
   "React Class Component": {
     "prefix": "react-cc",
-    "description": "React Class Component",
+    "description": "React: Class Component",
     "body": [
       "import React, { Component } from 'react'",
       "",
@@ -76,6 +74,39 @@
       "export default ${1:ComponentName}"
     ]
   },
+  "React Connected Class Component": {
+    "prefix": "react-cc-con",
+    "description": "React: Connected Class Component",
+    "body": [
+      "import React, { Component } from 'react'",
+      "import { connect } from 'react-redux'",
+      "",
+      "export class ${1:ComponentName} extends Component {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<div>",
+      "\t\t\t\t$0",
+      "\t\t\t</div>",
+      "\t\t)",
+      "\t}",
+      "}",
+      "",
+      "const mapState = state => {",
+      "\treturn {",
+      "\t\t",
+      "\t}",
+      "}",
+      "",
+      "const mapDispatch = dispatch => {",
+      "\treturn {",
+      "\t\t",
+      "\t}",
+      "}",
+      "",
+      "export default connect(mapState, mapDispatch)(${1:ComponentName})",
+      ""
+    ]
+  },
   "React Functional Component": {
     "prefix": "react-fc",
     "description": "React Functional Component",
@@ -84,16 +115,75 @@
       "",
       "export const ${1:ComponentName} = (${2}) => {",
       "\treturn (",
-      "\t\t<div>$0</div>",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
       "\t)",
       "}",
       "",
       "export default ${1:ComponentName}"
     ]
   },
-  "Sequelize Model Definition": {
-    "prefix": "seq-model-def",
-    "description": "Sequelize model definition",
+  "React Connected Func. Component": {
+    "prefix": "react-fc-con",
+    "description": "React Connected Functional Component",
+    "body": [
+      "import React from 'react'",
+      "import { connect } from 'react-redux'",
+      "",
+      "export const ${1:ComponentName} = (${2}) => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "const mapState = state => {",
+      "\treturn {",
+      "\t\t",
+      "\t}",
+      "}",
+      "",
+      "const mapDispatch = dispatch => {",
+      "\treturn {",
+      "\t\t",
+      "\t}",
+      "}",
+      "",
+      "export default connect(mapState, mapDispatch)(${1:ComponentName})",
+      ""
+    ]
+  },
+  "React componentDidMount": {
+    "prefix": "cdm",
+    "description": "React: componentDidMount()",
+    "body": ["componentDidMount() {", "\t$0", "}", ""]
+  },
+  "React componentWillUnmount": {
+    "prefix": "cwun",
+    "description": "React: componentWillUnmount()",
+    "body": ["componentWillUnmount() {", "\t$0", "}", ""]
+  },
+  "React componentDidUpdate": {
+    "prefix": "cdup",
+    "description": "React: componentDidUpdate()",
+    "body": ["componentDidUpdate(prevState, prevProps) {", "\t$0", "}", ""]
+  },
+  "React UNSAFE_componentWillMount": {
+    "prefix": "cwm",
+    "description": "React: componentWillMount()",
+    "body": [
+      "// This lifecycle is being deprecated and should be avoided",
+      "UNSAFE_componentWillMount() {",
+      "\t$0",
+      "}",
+      ""
+    ]
+  },
+  "Sequelize Model": {
+    "prefix": "seq-model",
+    "description": "Sequelize: Model Definition",
     "body": [
       "const Sequelize = require('sequelize')",
       "const db = require('${1:../db}')",
@@ -105,12 +195,13 @@
       "",
       "})",
       "",
-      "module.exports = ${2:ModelName}"
+      "module.exports = ${2:ModelName}",
+      ""
     ]
   },
-  "Sequelize Model Column": {
-    "prefix": "seq-model-col",
-    "description": "Sequelize model column",
+  "Sequelize Column": {
+    "prefix": "seq-col",
+    "description": "Sequelize: Model Column",
     "body": [
       "\t${1:columnName}: {",
       "\t\ttype: Sequelize.${2:dataType},",
@@ -121,7 +212,7 @@
   },
   "Sequelize hasMany": {
     "prefix": "seq-hm",
-    "description": "Sequelize hasMany association",
+    "description": "Sequelize: hasMany",
     "body": [
       "${1:ModelOne}.hasMany(${2:ModelTwo})",
       "${2:ModelTwo}.belongsTo(${1:ModelOne})",
@@ -130,12 +221,12 @@
   },
   "Sequelize belongsTo": {
     "prefix": "seq-bt",
-    "description": "Sequelize belongsTo association",
+    "description": "Sequelize: belongsTo",
     "body": ["${1:ModelOne}.belongsTo(${2:ModelTwo})", "${0}"]
   },
   "Sequelize belongsToMany": {
     "prefix": "seq-btm",
-    "description": "Sequelize belongsToMany association",
+    "description": "Sequelize: belongsToMany",
     "body": [
       "${1:ModelOne}.belongsToMany(${2:ModelTwo}, { through: ${3:ThroughTable})",
       "${2:ModelTwo}.belongsToMany(${1:ModelOne}, { through: ${3:ThroughTable})",
@@ -150,14 +241,18 @@
       "",
       "const db = new Sequelize(",
       "\t'postgres://localhost:5432/${1:databaseName}',",
-      "\t{logging: false}",
+      "\t{",
+      "\t\tlogging: false",
+      "\t\toperatorsAliases: false",
+      "\t}",
       ")",
-      "module.exports= db"
+      "",
+      "module.exports = db"
     ]
   },
   "Redux Action Type and Creator": {
     "prefix": "redux-atc",
-    "description": "Redux Action Type and Creator",
+    "description": "Redux: Action Type and Creator",
     "body": [
       "export const ${1:ACTION_NAME} = '${1:ACTION_NAME}'",
       "",
@@ -169,7 +264,7 @@
   },
   "Redux Thunk Creator": {
     "prefix": "redux-thk",
-    "description": "Redux Thunk Creator",
+    "description": "Redux: Thunk Creator",
     "body": [
       "export const ${1:myThunkName} = () => async dispatch => {",
       "\ttry {",
@@ -182,7 +277,7 @@
   },
   "Redux Reducer": {
     "prefix": "redux-red",
-    "description": "Redux Reducer",
+    "description": "Redux: Reducer",
     "body": [
       "export const ${1:myReducer} = (state = ${2:initialState}, action) => {",
       "\tswitch (action.type) {",

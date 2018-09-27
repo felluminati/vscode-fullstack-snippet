@@ -5,14 +5,17 @@ This is the README for Fullstack Snippets.
 
 ## Table of Contense
 
-* [Features](#features)
-* [Prefix List](#prefix-list)
-  *  [Sequelize](#sequelize)
-  *  [Express](#express)
-  *  [React](#react)
-  *  [Redux](#redux)
-* [Known Issues](#known-issues)
-* [Release Notes](#rease-notes)
+- [Fullstack Snippets](#fullstack-snippets)
+  - [Table of Contense](#table-of-contense)
+  - [Features](#features)
+  - [Prefix List](#prefix-list)
+    - [Sequelize](#sequelize)
+    - [Express](#express)
+    - [React](#react)
+    - [Redux](#redux)
+  - [Known Issues](#known-issues)
+  - [Release Notes](#release-notes)
+    - [1.0.0](#100)
 
 ## Features
 
@@ -22,33 +25,40 @@ Fullstack Snippets is a snippet library that is catered to the fullstack curricu
 
 ### Sequelize
 
-Prefix | Definition
--------|-----------
-**seq-model-def** | full sequelize model definition including requires and export
-**seq-model-column** | additional model column to chain onto exsisting model definition
-**seq-hm** | has many/belongs to relationship between two tables
-**seq-bt** | belongs to association
-**seq-btm** | belongs to many association with a through table
-**dbc** | database creation setup and export
+| Prefix        | Definition                                                       |
+| ------------- | ---------------------------------------------------------------- |
+| **seq-model** | full Sequelize model definition including requires and export    |
+| **seq-col**   | additional model column to chain onto exsisting model definition |
+| **seq-hm**    | has many/belongs to relationship between two tables              |
+| **seq-bt**    | belongs to association                                           |
+| **seq-btm**   | belongs to many association with a through table                 |
+| **dbc**       | database creation setup and export                               |
 
 ### Express
-Prefix | Definition
--------|-----------
-**exp-router-method** | router method including try/catch statement(async default)
-**exp-server-index** | full express server setup for your index.js file
+| Prefix         | Definition                                                  |
+| -------------- | ----------------------------------------------------------- |
+| **exp-route**  | router method including try/catch statement (async default) |
+| **exp-server** | full Express server setup for your index.js file            |
 
 ### React
-Prefix | Definition
--------|-----------
-**react-cc** | react Class component with default export
-**react-fc** | react functional component with default export
+| Prefix           | Definition                                                 |
+| ---------------- | ---------------------------------------------------------- |
+| **react-cc**     | React Class component with default export                  |
+| **react-cc-con** | a connected React class component with default export      |
+| **react-fc**     | React functional component with default export             |
+| **react-fc-con** | a connected React functional component with default export |
+| **cdm**          | componentDidMount() React lifecycle hook                   |
+| **cwun**         | componentWillUnmount() React lifecycle hook                |
+| **cdup**         | componentDidUpdate() React lifecycle hook                  |
+| **cwm**          | componentWillMount() React lifecycle hook                  |
+
 
 ### Redux
-Prefix | Definition
--------|-----------
-**redux-atc** | redux action type and creator with built in exports
-**redux-thk** | redux thunk creator with try/catch
-**redux-red** | redux reducer
+| Prefix        | Definition                                          |
+| ------------- | --------------------------------------------------- |
+| **redux-atc** | Redux action type and creator with built in exports |
+| **redux-thk** | Redux thunk creator with try/catch                  |
+| **redux-red** | Redux reducer                                       |
 
 ## Known Issues
 

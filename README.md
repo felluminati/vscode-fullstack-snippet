@@ -2,6 +2,24 @@
 
 This is the README for Fullstack Snippets.
 
+## Table of Contense
+
+#### \* Features
+
+#### \* Prefix List
+
+##### \* Sequelize
+
+##### \* Express
+
+##### \* React
+
+##### \* Redux
+
+#### \* Known Issues
+
+#### \* Release Notes
+
 ## Features
 
 Fullstack Snippets is a snippet library that is catered to the fullstack curriculum

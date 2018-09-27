@@ -101,7 +101,8 @@
       "const ${2:ModelName} = db.define('${3:modelString}', {",
       "\t${4:columnName}: {",
       "\t\ttype: Sequelize.${5:dataType}",
-      "\t}",
+      "\t},",
+      "",
       "})",
       "",
       "module.exports = ${2:ModelName}"
@@ -155,7 +156,7 @@
     ]
   },
   "Redux Action Type and Creator": {
-    "prefix": "redux-action-type-and-creator",
+    "prefix": "redux-atc",
     "description": "Redux Action Type and Creator",
     "body": [
       "export const ${1:ACTION_NAME} = '${1:ACTION_NAME}'",
@@ -167,7 +168,7 @@
     ]
   },
   "Redux Thunk Creator": {
-    "prefix": "redux-thunk",
+    "prefix": "redux-thk",
     "description": "Redux Thunk Creator",
     "body": [
       "export const ${1:myThunkName} = () => async dispatch => {",
@@ -180,7 +181,7 @@
     ]
   },
   "Redux Reducer": {
-    "prefix": "redux-reducer",
+    "prefix": "redux-red",
     "description": "Redux Reducer",
     "body": [
       "export const ${1:myReducer} = (state = ${2:initialState}, action) => {",
